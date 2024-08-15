@@ -1,0 +1,221 @@
+COMMIT: No final, é onde eu digo para o Git que eu terminei o meu trabalho, que ele pode gravar ali uma fotografia do meu projeto naquele momento, pq está tudo bem eu terminei.
+
+STAGED: é tudo aquilo que esta preparado para gente fazer o commit.
+
+
+Deyvid52298556@L05011023896 MINGW64 ~ (master)
+$ cd Desktop
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop (master)
+$ mkdir Kalleb
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop (master)
+$ cd Kalleb
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ init git
+bash: init: command not found
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git init
+Initialized empty Git repository in C:/Users/Deyvid52298556/Desktop/Kalleb/.git/
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ code .
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code_TestOne.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git add code_TestOne.html
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   code_TestOne.html
+
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git commit -m "add code_TestOne"
+[master (root-commit) 0088a4f] add code_TestOne
+ Committer: Deyvid Kallebe Goncalves Dias <Deyvid52298556@edu.df.senac.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 13 insertions(+)
+ create mode 100644 code_TestOne.html
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git log
+commit 0088a4f4612423c57b9a1b8ae966dcc9e6af1167 (HEAD -> master)
+Author: Deyvid Kallebe Goncalves Dias <Deyvid52298556@edu.df.senac.br>
+Date:   Thu Aug 15 17:02:42 2024 -0300
+
+    add code_TestOne
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   code_TestOne.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git add code_TestOne.html
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   code_TestOne.html
+
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git commit -m "Adicionei um form, uma Label chamada E-mail e um input de text"
+[master 78da047] Adicionei um form, uma Label chamada E-mail e um input de text
+ Committer: Deyvid Kallebe Goncalves Dias <Deyvid52298556@edu.df.senac.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git log+
+git: 'log+' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git log
+commit 78da047d37390bc93e12c6c3d4f2ee9bd5db2dc3 (HEAD -> master)
+Author: Deyvid Kallebe Goncalves Dias <Deyvid52298556@edu.df.senac.br>
+Date:   Thu Aug 15 17:29:11 2024 -0300
+
+    Adicionei um form, uma Label chamada E-mail e um input de text
+
+commit 0088a4f4612423c57b9a1b8ae966dcc9e6af1167
+Author: Deyvid Kallebe Goncalves Dias <Deyvid52298556@edu.df.senac.br>
+Date:   Thu Aug 15 17:02:42 2024 -0300
+
+    add code_TestOne
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git push -u AnaVest master
+fatal: 'AnaVest' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ ^C
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git staged
+git: 'staged' is not a git command. See 'git --help'.
+
+The most similar command is
+        stage
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git add code_TestOne.html
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git commit -m "Nova mensagem"
+On branch master
+nothing to commit, working tree clean
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Deyvid52298556@L05011023896 MINGW64 ~/Desktop/Kalleb (master)
+$
